@@ -34,12 +34,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  newArr = arr
+  newArr.push(value);
 };
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+const addNumbers = (num, arr, times, callback => {
+  for(let i = 0; i<times; i++){
+    callback;
+  }
+  return newArr
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
