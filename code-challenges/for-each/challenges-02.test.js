@@ -9,7 +9,15 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  // Solution code here...
+  let newArray = [];
+  // arr.forEach(newArray.push(Math.pow(arr[i],3) ) );
+  // return newArray;
+
+  for (var i = 0; i<arr.length; i++){
+    newArray.push( Math.pow(arr[i],3) );
+  }
+  return newArray
+  //will try to get for each to for after getting all the tests passing
 }
 
 /* ------------------------------------------------------------------------------------------------
