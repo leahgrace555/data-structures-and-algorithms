@@ -13,6 +13,8 @@ const raisedToTheThird = (arr) => {
   // arr.forEach(newArray.push(Math.pow(arr[i],3) ) );
   // return newArray;
 
+  // newArray.push( arr.forEach( num => Math.pow(num,3)) );
+
   for (var i = 0; i<arr.length; i++){
     newArray.push( Math.pow(arr[i],3) );
   }
