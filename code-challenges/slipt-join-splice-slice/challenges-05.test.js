@@ -125,9 +125,16 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // maybe use regex? find "pounds, gallons, etc"
-  recipe.ingredients.forEach(){
-    
-  }
+  recipe.ingredients.forEach( ingredient => {
+    //cut off numbers
+     let firstIndex = ingredient.indexOf(' ');
+     let secndstr = ingredient.slice(firstIndex +1);
+
+     let secondIndex = secndstr.indexOf(' ');
+     let finalstr = secndstr.slice(secondIndex + 1);
+
+     result.push(finalstr);
+  })
   return result;
 };
 
