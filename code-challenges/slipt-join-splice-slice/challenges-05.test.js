@@ -37,7 +37,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templateWithJQuery = () => {
-  // Solution code here...
+  $('template').
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +55,11 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  let string = str
+  for(let i = 0; i < string.length + 1; i++){
+    sliced = string.slice(1);
+    result.push(sliced);
+  }
   return result;
 };
 
@@ -68,7 +72,12 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  let chars = [];
+  let wordtochar = arr;
+  for(let j = 0; j<wordtochar.length + 1; j++) {
+    let char = wordtochar.slice(j,j+1);
+    chars.push(char);
+  }
 };
 
 
@@ -115,7 +124,10 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  // maybe use regex? find "pounds, gallons, etc"
+  recipe.ingredients.forEach(){
+    
+  }
   return result;
 };
 
