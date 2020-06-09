@@ -37,7 +37,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templateWithJQuery = () => {
-  $('template').
+  $('template').html();
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ const howMuchPencil = (str) => {
   let result = [];
   let string = str
   for(let i = 0; i < string.length + 1; i++){
-    sliced = string.slice(1);
+    let sliced = string.slice(i);
     result.push(sliced);
   }
   return result;
@@ -74,10 +74,11 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 const wordsToCharList = (arr) => {
   let chars = [];
   let wordtochar = arr;
-  for(let j = 0; j<wordtochar.length + 1; j++) {
+  for(let j = 0; j<=wordtochar.length; j++) {
     let char = wordtochar.slice(j,j+1);
     chars.push(char);
   }
+  return chars;
 };
 
 
