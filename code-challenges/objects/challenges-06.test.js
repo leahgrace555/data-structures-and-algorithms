@@ -70,7 +70,13 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templatingWithMustache = () => {
-  // Solution code here...
+  let array = [];
+  characters.forEach(person => {
+    let template = $('#template').html()
+    let toHTML = Mustache.render(template,person);
+    array.push(toHTML);
+  })
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +105,7 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-  houses.push(arr.house);
+  arr.house.forEach( house => houses.push(house))
   return houses;
 };
 
