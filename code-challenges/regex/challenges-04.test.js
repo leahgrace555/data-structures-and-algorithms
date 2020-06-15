@@ -39,8 +39,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  //let str = String(input);
-  let regex = / \d / ;
+  //let str = toString(input);
+  let regex = /\d/ ;
   return regex.test(input);
 };
 
@@ -53,8 +53,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let regex = /^[A-Z]/
-  return str.match(regex);
+  let regex = /[A-Z][a-z]+\b/g;
+  return str.match(regex) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,10 +64,16 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /^[A-J]/gm;
-  let str = String(arr);
-  return str.match(regex);
-};
+  let regex = /^[A-J]/;
+  let cities = []
+
+  arr.forEach(city => {
+    if(city.match(regex)){
+      cities.push(city);
+    }else{console.log('lol nope')}
+  })
+  return cities;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
