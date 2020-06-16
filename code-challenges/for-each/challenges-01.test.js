@@ -33,17 +33,17 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
+
 const addValues = (arr, value) => {
-  newArr = arr
-  newArr.push(value);
+  arr.push(value);
 };
 
-const addNumbers = (num, arr, times, callback => {
-  for(let i = 0; i<times; i++){
-    callback;
+const addNumbers = (num, arr, times, callback) => {
+  for(var i = 0; i<times; i++) {
+    callback(arr,num)
   }
-  return newArr
-}
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -63,7 +63,14 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let groceryList = [];
+  availableItems.forEach(item => {
+    console.log(item)
+    if(item.available === true){
+      groceryList.push(item.name)
+    } else {console.log('not available')}
+  })
+  return groceryList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,7 +88,17 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let finalArr = [];
+  arr.forEach(number => {
+    if(number %3 === 0 && number %5 ===0 ){
+      finalArr.push('Fizz Buzz');
+    } else if (number %5 ===0){
+      finalArr.push('Buzz');
+    } else if(number %3 ===0) {
+      finalArr.push('Fizz')
+    } else {finalArr.push(number)}
+  })
+  return finalArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
