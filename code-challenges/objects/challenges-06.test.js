@@ -104,8 +104,9 @@ Write a function named getHouses that returns a new array containing the names o
 ------------------------------------------------------------------------------------------------ */
 
 const getHouses = (arr) => {
+  console.log(arr)
   let houses = [];
-  arr.house.forEach( house => houses.push(house))
+  arr.forEach( house => houses.push(house.house))
   return houses;
 };
 
@@ -122,7 +123,11 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  // arr.forEach(person => {
+  //   if(person.name === character) {
+  //     let hasChildren = person.children.values
+  //   }
+  // })
 
 };
 
