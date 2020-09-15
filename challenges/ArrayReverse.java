@@ -6,7 +6,7 @@ public class ArrayReverse {
 
       reverseArray(forwardArray);
       for(int i=0;i<forwardArray.length;i++){
-        System.out.println(forwardArray[i]);
+        System.out.println(forwardArray[i]);         
       }
 }
     public static void reverseArray(int[] forwardArray){
