@@ -27,3 +27,10 @@ public class BinarySearch {
         return -1;
     }
 }
+
+//Code Review Notes:
+
+//public class BinarySearch {
+    //public static void main(String[] args){
+//        int[] numbs = new int[]{1,2,3,4,5,6}
+   // }
