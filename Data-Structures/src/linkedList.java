@@ -21,6 +21,13 @@ public class linkedList {
     }
 
 
+    Node root;
+    int size;
+
+    public linkedList() {
+        root = new Node();
+        size = 0;
+    }
 
 }
 
