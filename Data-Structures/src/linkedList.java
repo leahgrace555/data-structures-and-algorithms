@@ -12,10 +12,15 @@
 //format: "{ a } -> { b } -> { c } -> NULL
 
 
+import java.util.LinkedList;
 
 public class linkedList {
 
-    
+    public static void main(String[] args) {
+        LinkedList linkedList = new LinkedList();
+    }
+
+
 
 }
 
