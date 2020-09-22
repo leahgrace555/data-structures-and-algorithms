@@ -13,6 +13,10 @@ define a method called includes that takes any value as an argument and returns 
  define a method called toString that returns a string of all the values in the linked list
 format: "{ a } -> { b } -> { c } -> NULL
 
+Approach:
+
+![whiteboard image](aww-board.png)
+
 # tutorials used: 
 https://www.youtube.com/watch?v=ch1uQeu0PVY
 https://www.youtube.com/watch?v=YQQio9BGWgs
