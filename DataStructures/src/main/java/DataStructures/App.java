@@ -11,15 +11,25 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-            LinkedList listy = new LinkedList();
-            listy.addToFront(2);
-            listy.addToFront(3);
-            listy.addToFront(4);
-            listy.addToEnd(7);
-            listy.addAfter(2,28);
-            System.out.println(listy);
-            listy.removeFromEnd();
-            System.out.println(listy);
+        LinkedList listy = new LinkedList();
+        listy.addToFront(2);
+        listy.addToFront(3);
+        listy.addToFront(4);
+        System.out.println(listy); //should be 4,3,2
+
+        listy.addToEnd(7);
+        listy.addToEnd(8);
+        listy.addToEnd(9);
+        System.out.println(listy + "should say 4 3 2 7 8 9");
+//            LinkedList listy = new LinkedList();
+//            listy.addToFront(2);
+//            listy.addToFront(3);
+//            listy.addToFront(4);
+//            listy.addToEnd(7);
+//            listy.addAfter(2,28);
+//            System.out.println(listy);
+//            listy.removeFromEnd();
+//            System.out.println(listy);
         }
     }
 
