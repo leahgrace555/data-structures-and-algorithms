@@ -1,4 +1,4 @@
-package DataStructures.LinkedList;
+package dataStructures.linkedList;
 
 //need to create a LinkedList.Node class that has properties for the value stored in the LinkedList.Node and pointer to next LinkedList.Node
 
@@ -12,11 +12,13 @@ package DataStructures.LinkedList;
 //format: "{ a } -> { b } -> { c } -> NULL
 
 
+import java.util.ArrayList;
+
 public class LinkedList {
 
     //need instance variables head and tail. these are "pointers"
     public Node head = null;
-    public Node tail = null;
+   public Node tail = null;
 
     //new add method:
     public void addToFront(int newValue) { //head first insertion
@@ -28,6 +30,7 @@ public class LinkedList {
             newNode.next = this.head;
             this.head = newNode;
         }
+        System.out.println(newNode.value);
     }
 
     public void addToEnd(int newValue) {
@@ -102,9 +105,26 @@ public class LinkedList {
         }
     }
 
-    public String toString() {
-        return toString(this.head);
+    public int valueFromKth(int kthPlace) throws Exception{
+        Node current = head;
+        ArrayList<Integer> complete = new ArrayList<>();
+
+        if (current.next !=null )
+            do {
+                complete.add(current.value);
+                current = current.next;
+            } while(current !=null);
+
+            if (kthPlace > complete.size()) {
+                throw new Exception("Exception: kth place not in LinkedList");
+            }
+            System.out.println(complete);
+            return complete.get(complete.size() - kthPlace);
     }
+//
+//    public String toString() {
+//        return toString(this.head);
+//    }
 
     public String toString(Node current) {
         if (current ==null) {
@@ -131,8 +151,10 @@ class Node {
     Node next;
 
     //protected variables can only be accessed internally in the app
-    protected Node(int value) {
+    public Node(int value) {
+
         this.value = value;
+        this.next = null;
     }
 }
 

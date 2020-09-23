@@ -26,9 +26,11 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'
+
 }
 
 application {
     // Define the main class for the application.
     mainClassName = 'DataStructures.App'
 }
+
