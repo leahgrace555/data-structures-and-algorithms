@@ -20,3 +20,13 @@ Approach:
 # tutorials used: 
 https://www.youtube.com/watch?v=ch1uQeu0PVY
 https://www.youtube.com/watch?v=YQQio9BGWgs
+
+## Day 2: 
+
+Challenge: 
+- Add a method that find the value at the kth-from-end of the linked list
+
+Approach: 
+![whiteboard image](aww-board2.png)
+
+
