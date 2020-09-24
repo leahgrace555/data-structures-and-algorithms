@@ -29,4 +29,11 @@ Challenge:
 Approach: 
 ![whiteboard image](aww-board2.png)
 
+## Day 3:
+
+Challenge: add a method that will "zip" together two linked lists
+
+Approach:
+
+![whiteboard img](aww-board3.png)
 
