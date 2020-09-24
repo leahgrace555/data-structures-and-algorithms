@@ -121,6 +121,15 @@ public class LinkedList {
             System.out.println(complete);
             return complete.get(complete.size() - kthPlace);
     }
+
+    public static Node zipLists(Node h1, Node h2) {
+        if (h1 == null) return h2;
+        if (h2 == null) return h1;
+
+        h1.next = zipLists(h1.next, h2);
+        return h1;
+    }
+
 //
 //    public String toString() {
 //        return toString(this.head);

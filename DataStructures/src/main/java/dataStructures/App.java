@@ -5,6 +5,8 @@ package dataStructures;
 
 import dataStructures.linkedList.LinkedList;
 
+import javax.xml.soap.Node;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
@@ -17,10 +19,24 @@ public class App {
         listy.addToFront(4);
         System.out.println(listy); //should be 4,3,2
 
-        listy.addToEnd(7);
-        listy.addToEnd(8);
-        listy.addToEnd(9);
+        LinkedList listy2 = new LinkedList();
+        listy.addToFront(5);
+        listy.addToFront(6);
+        listy.addToFront(7);
+
+        Node head1 = listy.head;
+        Node head2 = listy2.head;
+
+
+//        listy.addToEnd(7);
+//        listy.addToEnd(8);
+//        listy.addToEnd(9);
+
+
+
         System.out.println(listy + "should say 4 3 2 7 8 9");
+
+
 //            LinkedList listy = new LinkedList();
 //            listy.addToFront(2);
 //            listy.addToFront(3);
