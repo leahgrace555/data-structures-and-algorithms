@@ -5,6 +5,8 @@ package dataStructures;
 
 import dataStructures.linkedList.LinkedList;
 import org.junit.Test;
+import sun.awt.image.ImageWatched;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
@@ -35,7 +37,38 @@ public class AppTest {
         assertEquals("The expected value is ", 3, listy.valueFromKth(2));
     }
 
+    @Test
+    public void testZipper(){
+
+        LinkedList listy = new LinkedList();
+        LinkedList listy2 = new LinkedList();
+
+        listy.addToFront(2);
+        listy.addToFront(3);
+        listy.addToFront(4);
+
+        listy2.addToFront(5);
+        listy2.addToFront(6);
+        listy2.addToFront(7);
+
+//        LinkedList ll = new LinkedList();
+//        LinkedList ll2 = new LinkedList();
+//        ll.insert(3);
+//        ll.insert(2);
+//        ll.insert(1);
+//        ll2.insert(7);
+//        ll2.insert(6);
+//        ll2.insert(5);
+//
+       listy.zipLists(listy, listy2);
+
+       System.out.println(listy);
+
+     //   assertEquals("we should get 1 -> 6 -> 2 and so on", listy.toString());
+    }
 }
+
+
 
 //        listy.addToFront(2);
 //        listy.addToFront(3);
