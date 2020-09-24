@@ -24,8 +24,8 @@ public class App {
         listy.addToFront(6);
         listy.addToFront(7);
 
-        Node head1 = listy.head;
-        Node head2 = listy2.head;
+//        Node head1 = listy.head;
+//        Node head2 = listy2.head;
 
 
 //        listy.addToEnd(7);

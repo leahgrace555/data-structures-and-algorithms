@@ -122,12 +122,47 @@ public class LinkedList {
             return complete.get(complete.size() - kthPlace);
     }
 
-    public static Node zipLists(Node h1, Node h2) {
-        if (h1 == null) return h2;
-        if (h2 == null) return h1;
+//    public static Node zipLists(Node h1, Node h2) {
+//        if (h1 == null) return h2;
+//        if (h2 == null) return h1;
+//
+//        h1.next = zipLists(h1.next, h2);
+//        return h1;
+//    }
 
-        h1.next = zipLists(h1.next, h2);
-        return h1;
+    //from pair programming with Krys and Matt:
+    public String insert(int value) {
+        Node node = new Node(value);
+        if (this.head == null) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
+        return "Node has been added.";
+    }
+
+    public static LinkedList zipLists(LinkedList one, LinkedList two) {
+        LinkedList ll = new LinkedList();
+        if(one == null){
+            return two;
+        }else if (two == null){
+            return one;
+        }
+        Node current1 = one.head;
+        Node current2 = two.head;
+        Node tempVar = current1.next;
+        Node tempVar2 = current2.next;
+
+        while(tempVar != null& tempVar2 !=null){
+            current1 = current2;
+            current2 = current1.next;
+            current1.next = current2.next;
+            ll.insert(tempVar.value);
+            ll.insert(tempVar2.value);
+        }
+        return ll;
     }
 
 //
