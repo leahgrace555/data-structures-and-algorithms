@@ -9,6 +9,6 @@
 ![whiteboard2](./IMG_0401.png)
 
 ## Challenge 03:
-
+- Write a binary search algorithm that takes in a sorted array and a search key and returns the index position of the element matching the search key, or -1 if the element does not exist.
 ![whiteboard3](./IMG_0402.png)
 
