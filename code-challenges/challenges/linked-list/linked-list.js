@@ -16,6 +16,16 @@ class LinkedList {
     this.size = 0
   }
 
+  addToFront(value) {
+    let node = new Node(value);
+    if(this.head == null) {
+      this.head = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+  }
+
   addToEnd(value) {
     //this adds to the ends, need to refactor to add to beginning
     let node = new Node(value);
@@ -50,5 +60,7 @@ const ll = new LinkedList();
     ll.addToEnd(5);
     ll.addToEnd(6);
     ll.addToEnd(10);
+    ll.addToFront(7)
+    ll.addToFront(7)
     console.log(ll);
     ll.toString();
