@@ -37,12 +37,12 @@ class LinkedList {
   toString() {
     let current = this.head;
     let returnString = '';
-    console.log(current + ' hello')
     while(current) {
-      returnString = returnString + `{${current}}->`
+      returnString = returnString + `{${current.value}}->`
       current=current.next
     }
-    console.log('this is the return string' + returnString);
+    returnString = returnString + 'NULL'
+    console.log(returnString);
   }
 }
 
