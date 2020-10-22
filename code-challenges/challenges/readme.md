@@ -28,3 +28,7 @@
 
 ![whiteboard5](./IMG_0459.PNG)
 
+## challenge 05:
+- update your linked list class to include the following methods:
+- includes, which takes any value as an arguements and returns a boolean depending on whether the value exists as a node on the list
+
