@@ -43,6 +43,16 @@ class LinkedList {
     this.size++;
   }
 
+  includes(value) {
+    let current = this.head;
+    while(current.next) {
+      if(current === value) {
+        return true;
+      } else { return false;}
+      current = current.next
+    }
+  }
+
 
   toString() {
     let current = this.head;
@@ -62,5 +72,6 @@ const ll = new LinkedList();
     ll.addToEnd(10);
     ll.addToFront(7)
     ll.addToFront(7)
+    console.log(ll.includes(7)
     console.log(ll);
     ll.toString();
