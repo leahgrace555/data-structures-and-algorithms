@@ -8,6 +8,6 @@ describe('testing challenge 4', () => {
     ll.addToEnd(6);
     ll.addToEnd(7);
     ll.addToEnd(8);
-    expect(ll.toString().toEqual())
+    expect(ll.toString().toEqual('blah'));
   })
 })

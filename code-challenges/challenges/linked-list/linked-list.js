@@ -44,13 +44,16 @@ class LinkedList {
   }
 
   includes(value) {
+    console.log(this.head);
     let current = this.head;
-    while(current.next) {
-      if(current === value) {
+    while(current) {
+      if(current.value === value) {
+        console.log('its a match');
         return true;
-      } else { return false;}
-      current = current.next
+      } 
+      current = current.next;
     }
+    return false;
   }
 
 
@@ -71,7 +74,10 @@ const ll = new LinkedList();
     ll.addToEnd(6);
     ll.addToEnd(10);
     ll.addToFront(7)
-    ll.addToFront(7)
-    console.log(ll.includes(7)
-    console.log(ll);
-    ll.toString();
+    ll.includes(7);
+   // console.log(ll);
+   ll.toString();
+
+   console.log(ll.includes(10));
+   console.log(ll.includes(10000));
+   
