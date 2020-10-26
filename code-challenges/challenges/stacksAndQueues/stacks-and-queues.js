@@ -34,3 +34,30 @@ class Stack {
   }
 
 }
+
+class Queue {
+  constructor() {
+    this.front = 0;
+
+  }
+
+  enqueue(itemtoQueue) {
+    //adds a new node with the value to the back of the queue
+
+  }
+
+  dequeue() {
+    //removes the node from the front of the queue and does not take any arguements
+    //should raise na exception when called on an empty queue
+  }
+
+  peek() {
+    //does not take any arguements
+    //returns the value at the front of the queue without removing it
+  }
+
+  isEmpty() {
+    //does not take any arguements
+    //returns a boolean dependign on if the queue is empty or not
+  }
+}
