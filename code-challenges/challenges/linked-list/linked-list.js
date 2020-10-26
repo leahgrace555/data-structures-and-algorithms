@@ -56,14 +56,6 @@ class LinkedList {
     return false;
   }
 
-  // insertBefore(node,value){
-  //   let current = this.head;
-
-  //   while(current.value !== null) {
-  //     console.log('hello')
-  //   }
-  // }
-
   insertAfter(node,value) {
     let current = this.head;
     console.log(current.value);
@@ -130,6 +122,8 @@ const ll = new LinkedList();
    ll.toString()
    //console.log(ll.includes(10));
    //console.log(ll.includes(10000));
+   console.log(ll.size);
 
-
+module.exports = LinkedList;
+module.exports = Node;
    
