@@ -32,3 +32,17 @@
 - update your linked list class to include the following methods:
 - includes, which takes any value as an arguements and returns a boolean depending on whether the value exists as a node on the list
 
+## Challenge 06:
+
+### approach:
+
+## Challenge 07:
+
+### approach:
+
+## Challenge 08:
+
+### approach:
+
+## Challenge 08: Implement a Queue Using Two Stacks
+

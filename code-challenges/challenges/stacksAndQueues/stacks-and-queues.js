@@ -23,8 +23,8 @@ class Stack {
   // does not take in any arguements
   //removes the node form the top of the stack
   let temp = this.top;
-  this.top = tempt.next;
-  temp.next = nulll
+  this.top = temp.next;
+  temp.next = null
   return temp.value;
 
   }
@@ -42,7 +42,7 @@ class Stack {
     if(this.top === null) {
       return true;
     } else {
-      false;
+      return false;
     }
 
   }
@@ -51,13 +51,17 @@ class Stack {
 
 const testStack = new Stack();
 
+// console.log(testStack.isEmpty());
 
-testStack.push(1);
-testStack.push(2);
-testStack.push(3);
-testStack.push(4);
+// testStack.push(1);
+// testStack.push(2);
+// testStack.push(3);
+// testStack.push(4);
+// testStack.pop();
 
-console.log(testStack);
+// console.log(testStack.peek());
+
+// console.log(testStack.isEmpty());
 
 class Queue {
   constructor() {
@@ -108,8 +112,30 @@ class Queue {
   }
 }
 
+class PseudoQueue {
+  constructor() {
+    this.enqueueStack = new Stack();
+    this.dequeueStack = new Stack();
+    this.size = 0
+  }
+
+  enqueue(itemToEnqueue) {
+    this.enqueueStack.push(itemToEnqueue);
+    this.size++;
+  }
+
+  dequeue() {
+    
+  }
+}
+
 let testQueue = new Queue();
 console.log(testQueue.isEmpty());
+
+let testPseudoQueue = new PseudoQueue();
+testPseudoQueue.enqueue(27);
+console.log(testPseudoQueue);
+
 
 testQueue.enqueue(565)
 testQueue.enqueue(5)
