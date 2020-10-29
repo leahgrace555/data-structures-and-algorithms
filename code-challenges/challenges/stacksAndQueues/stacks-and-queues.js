@@ -144,3 +144,5 @@ testQueue.enqueue(5493)
 
 console.log(testQueue.peek());
 console.log(testQueue.isEmpty());
+
+module.exports = Stack;
