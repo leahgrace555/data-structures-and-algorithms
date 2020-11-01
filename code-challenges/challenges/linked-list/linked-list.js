@@ -24,6 +24,7 @@ class LinkedList {
       node.next = this.head;
       this.head = node;
     }
+    this.size++
   }
 
   addToEnd(value) {
@@ -69,6 +70,7 @@ class LinkedList {
       }
       current = current.next;
     }
+    this.size++
   }
 
   insertBefore(nodeToInsertBefore,valueToInsert) {
@@ -91,6 +93,24 @@ class LinkedList {
       current = current.next;
     }
   }
+  this.size++
+  }
+
+  kthFromEnd(k) {
+    let counter = 1;
+    let current = this.head;
+    let placeToReturn = this.size-1 -k;
+    let kthFromEndValue = null;
+    while(counter<=this.size) {
+      if(counter === placeToReturn) {
+        kthFromEndValue = current.value;
+        break;
+      } else {
+        current = current.next;
+        counter++;
+      }
+    }
+    return kthFromEndValue;
   }
 
 
@@ -123,6 +143,9 @@ const ll = new LinkedList();
    //console.log(ll.includes(10));
    //console.log(ll.includes(10000));
    console.log(ll.size);
+
+ ll.kthFromEnd(4);
+ console.log(ll.kthFromEnd(4));
 
 module.exports = LinkedList;
 module.exports = Node;
