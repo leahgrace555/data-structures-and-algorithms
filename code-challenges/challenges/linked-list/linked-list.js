@@ -45,7 +45,6 @@ class LinkedList {
   }
 
   includes(value) {
-    console.log(this.head);
     let current = this.head;
     while(current) {
       if(current.value === value) {
@@ -59,7 +58,6 @@ class LinkedList {
 
   insertAfter(node,value) {
     let current = this.head;
-    console.log(current.value);
 
     while (current !== null) {
       if (current.value === node){
@@ -75,7 +73,6 @@ class LinkedList {
 
   insertBefore(nodeToInsertBefore,valueToInsert) {
     let current = this.head;
-    console.log(current.next.value);
 
     if(nodeToInsertBefore===this.head.value) {
       this.addToFront(valueToInsert);
@@ -126,6 +123,35 @@ class LinkedList {
   }
 }
 
+function zipList(listOne,listTwo) {
+  let zippedList = new LinkedList();
+  zippedList.current = zippedList.head;
+  listOne.current = listOne.head;
+  listTwo.current = listTwo.head;
+
+  while(listOne && listTwo) {
+    
+    if(listOne.current !==null || listTwo.current !==null) {
+      zippedList.addToEnd(listTwo.current.value);
+      zippedList.addToEnd(listOne.current.value);
+      listTwo.current = listTwo.current.next;
+      listOne.current = listOne.current.next;
+    }
+    else if (listOne.current !== null && listTwo.current === null) {
+      zippedList.addToEnd(listOne.current.value);
+      listOne.current = listOne.current.next;
+    } else if (listOne.current == null || listTwo.current != null) {
+      zippedList.addToEnd(listTwo.current.value);
+      listTwo.current = listTwo.current.next;
+    }
+    else {
+      listOne.current = listOne.current.next;
+      listTwo.current = listTwo.current.next
+    }
+  }
+  return zippedList.head;
+}
+
 const ll = new LinkedList();
     ll.addToEnd(5);
     ll.addToEnd(6);
@@ -142,11 +168,24 @@ const ll = new LinkedList();
    ll.toString()
    //console.log(ll.includes(10));
    //console.log(ll.includes(10000));
-   console.log(ll.size);
+  //  console.log(ll.size);
 
  ll.kthFromEnd(4);
- console.log(ll.kthFromEnd(4));
+//  console.log(ll.kthFromEnd(2));
+//  console.log(ll.kthFromEnd(4));
+
+ let ll2 = new LinkedList();
+ ll2.addToEnd(3);
+ ll2.addToEnd(7);
+ ll2.addToEnd(5);
+ ll2.addToEnd(9);
+
+
+ console.log(ll.toString());
+ console.log(ll2.toString());
+
+ zipList(ll,ll2);
 
 module.exports = LinkedList;
 module.exports = Node;
-   
+ 
