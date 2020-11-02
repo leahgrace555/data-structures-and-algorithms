@@ -1,0 +1,11 @@
+{
+  "name": "challenges",
+  "version": "1.0.0",
+  "description": "## Challenge 01: - reverse an array without using any built in methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "author": "",
+  "license": "ISC"
+}
