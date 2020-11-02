@@ -66,3 +66,7 @@ Round Brackets : ()
 Square Brackets : []
 Curly Brackets : {}
 
+### Approach: 
+
+![whitebaord13](./IMG_0569.PNG)
+
