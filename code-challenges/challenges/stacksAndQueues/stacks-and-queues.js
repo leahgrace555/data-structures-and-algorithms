@@ -53,11 +53,11 @@ const testStack = new Stack();
 
 // console.log(testStack.isEmpty());
 
-// testStack.push(1);
-// testStack.push(2);
-// testStack.push(3);
-// testStack.push(4);
-// testStack.pop();
+testStack.push(1);
+testStack.push(2);
+testStack.push(3);
+testStack.push(4);
+testStack.pop();
 
 // console.log(testStack.peek());
 
@@ -119,30 +119,47 @@ class PseudoQueue {
     this.size = 0
   }
 
+  isEmpty() {
+    if (this.size === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   enqueue(itemToEnqueue) {
     this.enqueueStack.push(itemToEnqueue);
     this.size++;
   }
 
   dequeue() {
-    
+    if (this.isEmpty()) { return 'queue is empty, cannot deque'}
+
+    while(!this.isEmpty()) {
+      this.dequeueStack.push(this.enqueueStack.pop())
+    }
+    return this.dequeueStack.pop();
   }
 }
 
 let testQueue = new Queue();
-console.log(testQueue.isEmpty());
+//console.log(testQueue.isEmpty());
 
 let testPseudoQueue = new PseudoQueue();
 testPseudoQueue.enqueue(27);
+testPseudoQueue.enqueue(42);
+console.log( 'this is the pseudoqueue')
 console.log(testPseudoQueue);
 
+testPseudoQueue.dequeue();
 
-testQueue.enqueue(565)
-testQueue.enqueue(5)
-testQueue.enqueue(6)
-testQueue.enqueue(5493)
 
-console.log(testQueue.peek());
-console.log(testQueue.isEmpty());
+// testQueue.enqueue(565)
+// testQueue.enqueue(5)
+// testQueue.enqueue(6)
+// testQueue.enqueue(5493)
+
+// console.log(testQueue.peek());
+// console.log(testQueue.isEmpty());
 
 module.exports = Stack;
