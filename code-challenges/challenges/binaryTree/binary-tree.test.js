@@ -10,9 +10,9 @@ describe('testig binary tree', ()=> {
     const node3 = new Tree.node(3);
     const node4 = new Tree.node(4);
     tree.root = node1;
-    tree.root.leftChild = node2;
-    tree.root.rightChild = node3;
-    tree.root.rightChild.leftChild = node4;
+    tree.root.left = node2;
+    tree.root.right = node3;
+    tree.root.right.left = node4;
     expect(tree.preOrder(tree.root)).toEqual([1,2,3,4]);
   })
 })
