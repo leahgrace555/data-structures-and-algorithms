@@ -15,4 +15,11 @@ describe('testig binary tree', ()=> {
     tree.root.right.left = node4;
     expect(tree.preOrder(tree.root)).toEqual([1,2,3,4]);
   })
+
+  it('should add a new node in the correct place', ()=> {
+    const tree = new Tree.searchTree();
+    console.log(tree.root);
+    tree.add(5);
+    expect(tree.root.value).toEqual(5);
+  })
 })

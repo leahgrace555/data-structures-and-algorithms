@@ -58,50 +58,69 @@ class BinaryTree {
     }
   }
 
-  postOrder() {
+  postOrderOne() {
+    if(root.left ===null && root.right === null) {
+      return null;
+    }
+    const values = []
+    let current = root;
+    this.postOrderTwo(current,values);
+    return values;
+  }
+  
 
+  postOrderTwo() {
+    if(root.left) {
+      this.postOrderTwo(root.left,array)
+    }
+    if(root.right) {
+      this.postOrderTwo(root.right,array)
+    }
+    array.push(root.value);
   }
 
 }
 
-// class BinarySearchTree extends BinaryTree {
+class BinarySearchTree extends BinaryTree {
 
-//   constructor(value,left,right,root,comparator) {
-//     super(value,left,right)
-//     this.root=root;
+  constructor(value,left,right,root,comparator) {
+    super(value,left,right)
+    this.root=root;
 
-//   }
+  }
+  
+  insertNode(node,newNode) {
+    if (newNode.value < node.value) {
+      if(node.left === null) {
+        node.left = newNode;
+      } else {
+        this.insertNode(node.left,newNode)
+      }
+    } else {
+      if (node.right === null) {
+        node.right = newNode;
+      } else {
+        this.insertNode(node.right,newNode);
+      }
+    }
+  }
+    add(value) {
+      // this needs to 'wrap' the value up in a node and place in the correct place in tree
+      let newNode = new Node(value);
+      if (!this.root) {
+        this.root = newNode;
+      } else {
+        console.log('root is not empty')
+        this.insertNode(this.root,newNode);
+      }
+    }
 
-//     add(value) {
-//       // this needs to 'wrap' the value up in a node and place in the correct place in tree
-//       let newNode = new Node(value);
-//       if (this.root === null) {
-//         this.root = newNode;
-//       } else {
-//         insertNode(this.root,newNode);
-//       }
 
-//       function insertNode(node,newNode) {
-//         if (newNode.value < node.value) {
-//           if(node.left === null) {
-//             node.left = newNode;
-//           } else {
-//             this.insertNode(node.left,newNode)
-//           }
-//         } else {
-//           if (node.right === null) {
-//             node.right = newNode;
-//           } else {
-//             this.insertNode(node.right,newNode);
-//           }
-//         }
-//       }
-//     }
+      contains(key) {
+        // needs to return a boolean representing whether the key is contianed in the tree
+      }
+    }
 
-//     contains(key) {
-//       // needs to return a boolean representing whether the key is contianed in the tree
-//     }
-// }
 
 // console.log(BinarySearchTree);
 
@@ -112,5 +131,6 @@ class BinaryTree {
 
 module.exports = {
   tree: BinaryTree,
-  node: Node
+  node: Node,
+  searchTree: BinarySearchTree
 }
