@@ -45,6 +45,22 @@ function fizzbuzz(value) {
     newNodeValue = 'fizzbuzz';
   } else if(value % 3 === 0) {
     newNodeValue = 'fizz';
-  }
+  } else if(value % 5 === 0) {
+    newNodeValue = 'buzz';
+  } else { newNodeValue = value.toString()}
+return newNodeValue
+}
 
+let testArr = [1,3,5,10,15]
+let testOutput = [];
+
+testArr.forEach(value => {
+
+  testOutput.push(fizzbuzz(value));
+})
+
+console.log(testOutput);
+
+module.exports = {
+  fizzbuzz: fizzbuzz
 }
