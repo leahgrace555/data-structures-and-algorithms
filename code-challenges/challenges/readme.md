@@ -70,3 +70,10 @@ Curly Brackets : {}
 
 ![whitebaord13](./IMG_0569.PNG)
 
+## Challenge 16: 
+- Write a function that will return the maximum value in a binary tree
+
+## approach:
+
+![whitebaord13](./IMG_0574.PNG)
+

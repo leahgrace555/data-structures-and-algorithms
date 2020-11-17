@@ -119,73 +119,73 @@ class LinkedList {
       current=current.next
     }
     returnString = returnString + 'NULL'
-    console.log(returnString);
+    return returnString;
   }
 }
 
-function zipList(listOne,listTwo) {
-  let zippedList = new LinkedList();
-  zippedList.current = zippedList.head;
-  listOne.current = listOne.head;
-  listTwo.current = listTwo.head;
+// function zipList(listOne,listTwo) {
+//   let zippedList = new LinkedList();
+//   zippedList.current = zippedList.head;
+//   listOne.current = listOne.head;
+//   listTwo.current = listTwo.head;
 
-  while(listOne && listTwo) {
+//   while(listOne && listTwo) {
     
-    if(listOne.current !==null || listTwo.current !==null) {
-      zippedList.addToEnd(listTwo.current.value);
-      zippedList.addToEnd(listOne.current.value);
-      listTwo.current = listTwo.current.next;
-      listOne.current = listOne.current.next;
-    }
-    else if (listOne.current !== null && listTwo.current === null) {
-      zippedList.addToEnd(listOne.current.value);
-      listOne.current = listOne.current.next;
-    } else if (listOne.current == null || listTwo.current != null) {
-      zippedList.addToEnd(listTwo.current.value);
-      listTwo.current = listTwo.current.next;
-    }
-    else {
-      listOne.current = listOne.current.next;
-      listTwo.current = listTwo.current.next
-    }
-  }
-  return zippedList.head;
-}
+//     if(listOne.current !==null || listTwo.current !==null) {
+//       zippedList.addToEnd(listTwo.current.value);
+//       zippedList.addToEnd(listOne.current.value);
+//       listTwo.current = listTwo.current.next;
+//       listOne.current = listOne.current.next;
+//     }
+//     else if (listOne.current !== null && listTwo.current === null) {
+//       zippedList.addToEnd(listOne.current.value);
+//       listOne.current = listOne.current.next;
+//     } else if (listOne.current == null || listTwo.current != null) {
+//       zippedList.addToEnd(listTwo.current.value);
+//       listTwo.current = listTwo.current.next;
+//     }
+//     else {
+//       listOne.current = listOne.current.next;
+//       listTwo.current = listTwo.current.next
+//     }
+//   }
+//   return zippedList.head;
+// }
 
-const ll = new LinkedList();
-    ll.addToEnd(5);
-    ll.addToEnd(6);
-    ll.addToEnd(10);
-    ll.addToFront(11);
+// const ll = new LinkedList();
+//     ll.addToEnd(5);
+//     ll.addToEnd(6);
+//     ll.addToEnd(10);
+//     ll.addToFront(11);
     //ll.addToFront(7)
     //ll.includes(7);
    // console.log(ll);
-  ll.insertAfter(6,30000);
-   ll.insertBefore(6,46665);
-   ll.toString();
+  // ll.insertAfter(6,30000);
+  //  ll.insertBefore(6,46665);
+  //  ll.toString();
    
-   ll.insertBefore(753,60)
-   ll.toString()
+  //  ll.insertBefore(753,60)
+  //  ll.toString()
    //console.log(ll.includes(10));
    //console.log(ll.includes(10000));
   //  console.log(ll.size);
 
- ll.kthFromEnd(4);
+ //ll.kthFromEnd(4);
 //  console.log(ll.kthFromEnd(2));
 //  console.log(ll.kthFromEnd(4));
 
- let ll2 = new LinkedList();
- ll2.addToEnd(3);
- ll2.addToEnd(7);
- ll2.addToEnd(5);
- ll2.addToEnd(9);
+//  let ll2 = new LinkedList();
+//  ll2.addToEnd(3);
+//  ll2.addToEnd(7);
+//  ll2.addToEnd(5);
+//  ll2.addToEnd(9);
 
 
- console.log(ll.toString());
- console.log(ll2.toString());
+//  console.log(ll.toString());
+//  console.log(ll2.toString());
 
- zipList(ll,ll2);
+//  zipList(ll,ll2);
 
 module.exports = LinkedList;
-module.exports = Node;
+//module.exports = Node;
  
