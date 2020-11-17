@@ -12,3 +12,10 @@ let arr = [8,4,23,42,16,15];
 ````
 
 At completion, we expect the array to be sorted in ascending order.
+
+![firstpass](./IMG_0703.jpg)
+
+![secondpass](./IMG_0704.jpg)
+
+![third pass](./IMG_0705.jpg)
+
