@@ -53,7 +53,7 @@ function quickSorter(arr) {
   let pivot = arr[arr.length-1];
   let left = [];
   let right = [];
-
+  console.log(pivot);
   for(let element of arr.slice(0,arr.length-1)) {
     if (element < pivot ) {
       left.push(element);
@@ -61,5 +61,7 @@ function quickSorter(arr) {
   }
   return [...quickSorter(left),pivot, ...quickSorter(right)]
 }
+
+quickSorter([8,4,23,42,16,15])
 
 module.exports = quickSorter;

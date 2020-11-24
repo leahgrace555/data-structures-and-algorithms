@@ -45,4 +45,12 @@ Take this array as an example:
 ````
 let arr = [8,4,23,42,16,15];
 ````
+### First pass: 
+- assigns pivot to the rigth most value (15)
+- iterates over the array
+- 8 and 4 are pushed to the left array while 23,42,and 16 are pushed to the right array
+- the function is called recursively on an array that consists of the right, pivot and left as elements
 
+### second pass: the left array
+- the pivot is 4
+- 8
