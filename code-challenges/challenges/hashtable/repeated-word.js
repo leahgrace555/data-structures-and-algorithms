@@ -1,22 +1,19 @@
 'use strict';
 
-const hashTable = require('./hashtable.js');
-const HashTable = hashTable.hashTable;
-const Node = hashTable.node;
-const LinkedList = hashTable.linkedList;
+const {hashTable} = require('./hashtable.js');
 
 function findFirstRepeat(str) {
 
   let words = str.split(' ');
-  let storedWord = new HashTable();
+  let storedWord = new hashTable(1024);
 
   for(let i = 0; i< words.length; i++) {
     if(storedWord.contains(words[i])) {
       return words[i];
-    } else
+    } else {
+      storedWord.set(words[i],"words")
+    }
   }
 }
 
-let str = 'this is a string and stuff';
-let splitstr = str.split(' ');
-console.log(splitstr);
+module.exports = findFirstRepeat;
