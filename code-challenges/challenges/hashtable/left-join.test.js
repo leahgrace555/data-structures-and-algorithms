@@ -8,16 +8,16 @@ describe('testing challenge 33', () => {
     it('should do something', () => {
         let hash1 = new hashTable.hashTable(1024);
         let hash2 = new hashtable.hashTable(1024);
-        hash1.add(hash1.get('fond'), 'enamored');
-        hash1.add(hash1.get('wrath'), 'anger');
-        hash1.add(hash1.get('diligent'), 'employed');
-        hash1.add(hash1.get('outfit'), 'garb');
-        hash1.add(hash1.get('guide'), 'usher');
-        hash2.add(hash1.get('fond'), 'averse');
-        hash2.add(hash1.get('wrath'), 'delight');
-        hash2.add(hash1.get('diligent'), 'idle');
-        hash2.add(hash1.get('guide'), 'follow');
-        hash2.add(hash1.get('flow'), 'jam');
+        hash1.set('fond', 'enamored');
+        hash1.set('wrath', 'anger');
+        hash1.set('diligent', 'employed');
+        hash1.set('outfit', 'garb');
+        hash1.set('guide', 'usher');
+        hash2.set('fond', 'averse');
+        hash2.set('wrath', 'delight');
+        hash2.set('diligent', 'idle');
+        hash2.set('guide', 'follow');
+        hash2.set('flow', 'jam');
         
         let array = [
             ['fond', 'enamored', 'averse'],

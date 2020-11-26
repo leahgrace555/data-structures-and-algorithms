@@ -57,10 +57,13 @@ class Hashtable {
     let index = this.hash(key);
     let bucket = this.buckets[index];
 
-    if(!bucket.empty()) {
-      let value = bucket.find(key);
-      if (value) return value;
+    if(bucket) {
+      if(!bucket.empty()) {
+        let value = bucket.find(key);
+        if (value) return value;
+      }
     }
+
   }
 }
 
