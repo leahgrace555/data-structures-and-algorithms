@@ -26,7 +26,7 @@ class Hashtable {
       this.buckets[index] = new LinkedList();
     }
 
-    this.buckets[index].add({ [key]: value });
+    this.buckets[index].add({ key: key, value: value });
     return this.buckets[index];
   }
 

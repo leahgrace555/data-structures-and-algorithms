@@ -6,8 +6,8 @@ const leftJoin = require('./left-join.js');
 
 describe('testing challenge 33', () => {
     it('should do something', () => {
-        let hash1 = new hashTable.hashTable(1024);
-        let hash2 = new hashtable.hashTable(1024);
+        let hash1 = new hashTable.hashTable(20);
+        let hash2 = new hashtable.hashTable(20);
         hash1.set('fond', 'enamored');
         hash1.set('wrath', 'anger');
         hash1.set('diligent', 'employed');
@@ -20,11 +20,11 @@ describe('testing challenge 33', () => {
         hash2.set('flow', 'jam');
         
         let array = [
-            ['fond', 'enamored', 'averse'],
             ['wrath', 'anger', 'delight'],
             ['diligent', 'employed', 'idle'],
             ['outfit', 'garb', 'NULL'],
-            ['guide', 'usher', 'follow']
+            ['guide', 'usher', 'follow'],
+            ['fond', 'enamored', 'averse']
         ]
         expect(leftJoin(hash1, hash2)).toEqual(array)
     })
