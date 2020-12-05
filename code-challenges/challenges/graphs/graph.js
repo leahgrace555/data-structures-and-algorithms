@@ -122,6 +122,29 @@ class Graph {
     return visited;
   }
 
+  size(startNode) {
+    const visitedNodes = new Set();
+    let count = 0;
+    
+    const traverseNeighbors = (vertex, visited) => {
+
+      count++;
+      visited.add(vertex);
+
+      let neighbors = this.getNeighbors(vertex);
+      for (let edge of neighbors) {
+        if (!visited.has(edge.vertex)) {
+          traverseNeighbors(edge.vertex, visited);
+        }
+      }
+    }
+
+    traverseNeighbors(startNode, visitedNodes);
+
+    return count;
+
+  }
+
   // this uses the call stack to manage the order in which nodes are visited
   recursiveDepthFirst(startNode) {
 

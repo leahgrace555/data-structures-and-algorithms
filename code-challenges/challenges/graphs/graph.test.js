@@ -69,6 +69,9 @@ describe('testing graph', ()=> {
 
     expect(graph.adjacencyList.get(A)).toBeTruthy();
 
+    expect(graph.getNeighbors(A)).toEqual([{vertex: {value: 'B'}, weight: 0}, {vertex: {value: 'D'}, weight: 0}, {vertex: {value: 'C'}, weight: 0}])
+
+
   })
 
   it('should be able to add new adges', ()=> {
@@ -82,7 +85,19 @@ describe('testing graph', ()=> {
     const E = graph.addVertex('E');
     
     let addedEdge = graph.addEdge(A,B);
+
+    graph.addEdge(A, B);
+    graph.addEdge(A, D);
+    graph.addEdge(A, C);
+    graph.addEdge(B, E);
+    graph.addEdge(B, D);
+    graph.addEdge(D, C);
+
     expect(addedEdge).toBeTruthy();
+
+    expect(graph.size(A)).toEqual(5);
+
+
 
   })
 })
