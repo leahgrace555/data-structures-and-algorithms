@@ -194,5 +194,7 @@ console.log(testPseudoQueue);
 // console.log(testQueue.peek());
 // console.log(testQueue.isEmpty());
 
-module.exports = Stack;
-module.exports = Queue;
+module.exports = {
+  Stack,
+  Queue
+}
